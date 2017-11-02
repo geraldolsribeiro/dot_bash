@@ -8,6 +8,7 @@ fi
 #
 #export PATH="/usr/local/sbin:$PATH"
 
+source $HOME/.bash/user-dir
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
