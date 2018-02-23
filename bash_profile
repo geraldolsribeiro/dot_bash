@@ -30,5 +30,7 @@ export PATH
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
+export IBUS_ENABLE_SYNC_MODE=1
+
 # Limpa o cache
 ccache -C > /dev/null
