@@ -95,3 +95,14 @@ PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
 
 source ~/.fonts/*.sh
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export PATH=/usr/lib/icecc/bin:$PATH
+
+export ANDROID_HOME=/usr/lib/android-sdk
+
