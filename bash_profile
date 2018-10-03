@@ -33,4 +33,6 @@ export PATH
 export IBUS_ENABLE_SYNC_MODE=1
 
 # Limpa o cache
-ccache -C > /dev/null
+if [ $(which ccache > /dev/null) ]; then
+  ccache -C > /dev/null
+fi
