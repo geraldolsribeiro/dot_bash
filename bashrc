@@ -93,7 +93,9 @@ PERL_MM_OPT="INSTALL_BASE=/home/intmain/geraldoim/perl5"; export PERL_MM_OPT;
 # Para encontrar as gems
 PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
 
-source ~/.fonts/*.sh
+if [ -d ~/.fonts ]; then
+  source ~/.fonts/*.sh
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
