@@ -1,4 +1,6 @@
 # Quero manter o idioma me pt_BR, mas padronizar os diretórios em en_US
+#
+which xdg-user-dirs-update > /dev/null || exit
 
 [ -d "$HOME/Área de trabalho" ] && mv "$HOME/Área de trabalho" "$HOME/Desktop"
 [ -d "$HOME/Documentos" ]       && mv "$HOME/Documentos"       "$HOME/Documents"
