@@ -1,6 +1,10 @@
+# set -x
 export PATH=~/bin:$PATH
 
 source $HOME/.bash/bashrc_cb
+
+# Habilita o modo vi no bash
+# set -o vi
 
 platform='unknown'
 unamestr=`uname`
@@ -29,26 +33,29 @@ if [[ $platform == 'macos' ]]; then
 fi
 
 # Configuração do git
+if [ ! -f "$HOME/.gitconfig" ] || [ "$HOME/.bashrc" -nt "$HOME/.gitconfig" ]
+then
 case "$USER" in
-  geraldo)
-    git config --global user.name "Geraldo Ribeiro"
-    git config --global user.email geraldolsribeiro@gmail.com
-    git config --global core.editor vim
-    git config --global merge.tool vimdiff
-    ;;
-  geraldoim)
-    git config --global user.name "Geraldo Intmain"
-    git config --global user.email geraldolsribeiroim@gmail.com
-    git config --global core.editor vim
-    git config --global merge.tool vimdiff
-    ;;
-  geraldotk)
-    git config --global user.name "Geraldo Taoker"
-    git config --global user.email geraldolsribeirotk@gmail.com
-    git config --global core.editor vim
-    git config --global merge.tool vimdiff
-    ;;
-esac
+    geraldo)
+      git config --global user.name "Geraldo Ribeiro"
+      git config --global user.email geraldolsribeiro@gmail.com
+      git config --global core.editor vim
+      git config --global merge.tool vimdiff
+      ;;
+    geraldoim)
+      git config --global user.name "Geraldo Intmain"
+      git config --global user.email geraldolsribeiroim@gmail.com
+      git config --global core.editor vim
+      git config --global merge.tool vimdiff
+      ;;
+    geraldotk)
+      git config --global user.name "Geraldo Taoker"
+      git config --global user.email geraldolsribeirotk@gmail.com
+      git config --global core.editor vim
+      git config --global merge.tool vimdiff
+      ;;
+  esac
+fi
 
 case "$platform" in
   linux) PS_OS_ICON="△" ;;
@@ -103,6 +110,40 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+export PATH=$PATH:/opt/intmain/dev/linux/usr/bin
+
 export PATH=/usr/lib/icecc/bin:$PATH
 export ANDROID_HOME=/usr/lib/android-sdk
 
+
+alias t="todo-txt -d ~/todo/config"
+
+alias k="vim ~/imbok/content/chapter-misc/"
+
+export PATH=$PATH:/usr/lib/dart/bin/
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+export EDITOR=vim
+export TERM="xterm-256color"
+
+#CDPATH=.:~:~/src:~/calculations:~/ssh_mounts
+
+export CDPATH=.:~:~/git/Intmain
+
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$(CONDA_REPORT_ERRORS=false '/opt/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     \eval "$__conda_setup"
+# else
+#     if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/opt/anaconda3/etc/profile.d/conda.sh"
+#         CONDA_CHANGEPS1=false conda activate base
+#     else
+#         \export PATH="/opt/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda init <<<
+
+export FUSION_FONTS=~/.fonts/
