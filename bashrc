@@ -108,6 +108,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# FZF
+# Primeira instalacao:
+#   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+#   ~/.fzf/install
+# Atualizacao:
+# cd ~/.fzf && git pull && ./install
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export PATH=$PATH:/opt/intmain/dev/linux/usr/bin
@@ -147,3 +153,7 @@ export CDPATH=.:~:~/git/Intmain
 # <<< conda init <<<
 
 export FUSION_FONTS=~/.fonts/
+
+# para fazer a extensao pass_import ser localizado pelo pass
+# export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.5/site-packages/
+
