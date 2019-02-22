@@ -126,6 +126,9 @@ alias t="todo-txt -d ~/todo/config"
 
 alias k="vim ~/imbok/content/chapter-misc/"
 
+alias gotk="dm-tool switch-to-user geraldotk"
+alias goim="dm-tool switch-to-user geraldoim"
+
 export PATH=$PATH:/usr/lib/dart/bin/
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
