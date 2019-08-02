@@ -1,6 +1,6 @@
 # Quero manter o idioma me pt_BR, mas padronizar os diretórios em en_US
-#
-if [ $(which xdg-user-dirs-update > /dev/null) ]; then
+# apt install xdg-user-dirs 
+if hash xdg-user-dirs-update > /dev/null; then
   [ -d "$HOME/Área de trabalho" ] && mv "$HOME/Área de trabalho" "$HOME/Desktop"
   [ -d "$HOME/Documentos" ]       && mv "$HOME/Documentos"       "$HOME/Documents"
   [ -d "$HOME/Imagens" ]          && mv "$HOME/Imagens"          "$HOME/Pictures"
