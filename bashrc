@@ -81,13 +81,21 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+last_cmd_status() {
+  if [ $? -eq 0 ]; then
+    echo "👍"
+  else
+    echo "🔥"
+  fi
+}
+
 # 0 – Black; 1 – Red; 2 – Green; 3 – Yellow; 4 – Blue; 5 – Magenta; 6 – Cyan; 7 – White;
 RESET_COLOR="\[$(tput sgr0)\]"
 GIT_COLOR="\[$(tput setab 7)$(tput setaf 1)\]"
 PATH_COLOR="\[$(tput setab 2)$(tput setaf 0)\]"
 HOST_COLOR="\[$(tput setab 4)$(tput setaf 7)\]"
 
-export PS1="${PS_USER_COLOR} ${USER} ${PS_USER_ICON} ${HOST_COLOR} @\h ${PATH_COLOR} \w ${GIT_COLOR} \$(parse_git_branch) ${RESET_COLOR}\n\$ "
+export PS1="\$(last_cmd_status) ${PS_USER_COLOR} ${USER} ${PS_USER_ICON} ${HOST_COLOR} @\h ${PATH_COLOR} \w ${GIT_COLOR} \$(parse_git_branch) ${RESET_COLOR}\n\$ "
 
 
 
