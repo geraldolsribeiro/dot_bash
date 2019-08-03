@@ -8,7 +8,7 @@ fi
 #
 #export PATH="/usr/local/sbin:$PATH"
 
-source $HOME/.bash/user-dir
+source "$HOME/.bash/user-dir"
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -36,3 +36,13 @@ export IBUS_ENABLE_SYNC_MODE=1
 if [ $(which ccache > /dev/null) ]; then
   ccache -C > /dev/null
 fi
+
+for d in ~/.ack ~/.vim ~/.config/ranger/ ~/.fonts ~/.clang/ ~/.tmux
+do
+  if [ -d "$d" ]; then
+    pushd "$d"
+    git pull origin master
+    popd
+  fi
+done
+
