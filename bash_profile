@@ -37,7 +37,7 @@ if [ $(which ccache > /dev/null) ]; then
   ccache -C > /dev/null
 fi
 
-for d in ~/.ack ~/.vim ~/.config/ranger/ ~/.fonts ~/.clang/ ~/.tmux
+for d in ~/.ack ~/.vim ~/.config/ranger/ ~/.fonts ~/.clang/ ~/.tmux ~/.bash
 do
   if [ -d "$d" ]; then
     pushd "$d"
