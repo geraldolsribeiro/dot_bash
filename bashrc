@@ -126,9 +126,9 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH:/opt/intmain/dev/linux/usr/bin
 
-export PATH=/usr/lib/icecc/bin:$PATH
+#export PATH=/usr/lib/icecc/bin:$PATH
 export ANDROID_HOME=/usr/lib/android-sdk
-
+export JAVA_HOME=/usr/lib/jvm/jre-8-oracle-x64/
 
 alias t="todo-txt -d ~/todo/config"
 
@@ -145,7 +145,7 @@ export TERM="xterm-256color"
 
 #CDPATH=.:~:~/src:~/calculations:~/ssh_mounts
 
-export CDPATH=.:~:~/git/Intmain
+export CDPATH=.:~:~/git/Intmain:~/git/Taoker/
 
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
