@@ -1,3 +1,6 @@
+#!/bin/bash
+# shellcheck disable=SC1090,SC1091
+
 if [ -f ".bashrc" ] ; then
   source .bashrc
 fi
@@ -12,9 +15,9 @@ source "$HOME/.bash/user-dir"
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
+    source /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+    source /etc/bash_completion
   fi
 fi
 
@@ -33,16 +36,17 @@ export PATH
 export IBUS_ENABLE_SYNC_MODE=1
 
 # Limpa o cache
-if [ $(which ccache > /dev/null) ]; then
+# shellcheck disable=SC2046
+if [ $(command -v ccache > /dev/null) ]; then
   ccache -C > /dev/null
 fi
 
 for d in ~/.ack ~/.vim ~/.config/ranger/ ~/.fonts ~/.clang/ ~/.tmux ~/.bash
 do
   if [ -d "$d" ]; then
-    pushd "$d"
+    pushd "$d" || return
     git pull origin master
-    popd
+    popd || return
   fi
 done
 
