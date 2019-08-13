@@ -35,26 +35,28 @@ fi
 # Configuração do git
 if [ ! -f "$HOME/.gitconfig" ] || [ "$HOME/.bashrc" -nt "$HOME/.gitconfig" ]
 then
-case "$USER" in
+  case "$USER" in
     geraldo)
       git config --global user.name "Geraldo Ribeiro"
       git config --global user.email geraldolsribeiro@gmail.com
-      git config --global core.editor vim
-      git config --global merge.tool vimdiff
       ;;
     geraldoim)
       git config --global user.name "Geraldo Intmain"
       git config --global user.email geraldolsribeiroim@gmail.com
-      git config --global core.editor vim
-      git config --global merge.tool vimdiff
       ;;
     geraldotk)
       git config --global user.name "Geraldo Taoker"
       git config --global user.email geraldolsribeirotk@gmail.com
-      git config --global core.editor vim
-      git config --global merge.tool vimdiff
       ;;
   esac
+  git config --global core.editor vim
+  git config --global merge.tool vimdiff
+  git config --global pack.threads 1
+  git config --global pack.packSizeLimit 128m
+  git config --global pack.deltaCacheSize 128m
+  git config --global pack.windowMemory 128m
+  git config --global core.packedGitLimit 128m
+  git config --global core.packedGitWindowSize 128m
 fi
 
 case "$platform" in
