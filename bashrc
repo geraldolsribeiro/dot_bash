@@ -36,6 +36,10 @@ fi
 if [ ! -f "$HOME/.gitconfig" ] || [ "$HOME/.bashrc" -nt "$HOME/.gitconfig" ]
 then
   case "$USER" in
+    "") # no docker USER não é configurado
+      git config --global user.name "Geraldo Intmain"
+      git config --global user.email geraldolsribeiroim@gmail.com
+      ;;
     geraldo)
       git config --global user.name "Geraldo Ribeiro"
       git config --global user.email geraldolsribeiro@gmail.com
