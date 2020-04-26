@@ -150,7 +150,6 @@ fi
   alias gotk="dm-tool switch-to-user geraldotk"
   alias goim="dm-tool switch-to-user geraldoim"
 
-  export PATH=$PATH:/usr/lib/dart/bin/
   export PATH="$PATH":"$HOME/.pub-cache/bin"
 
   export EDITOR=vim
@@ -180,4 +179,14 @@ fi
 
   # para fazer a extensao pass_import ser localizado pelo pass
   # export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.5/site-packages/
+
+  for d in \
+    /usr/local/go/bin/ \
+    /usr/lib/dart/bin/ \
+    /opt/flutter/bin/
+  do
+    if [ -d "$d" ]; then
+      export PATH=$PATH:$d
+    fi
+  done
 
