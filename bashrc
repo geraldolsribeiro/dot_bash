@@ -181,9 +181,9 @@ fi
   # export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.5/site-packages/
 
   for d in \
-    /usr/local/go/bin/ \
-    /usr/lib/dart/bin/ \
-    /opt/flutter/bin/
+    /usr/local/go/bin \
+    /usr/lib/dart/bin \
+    /opt/flutter/bin
   do
     if [ -d "$d" ]; then
       export PATH=$PATH:$d
