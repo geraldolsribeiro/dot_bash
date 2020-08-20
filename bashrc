@@ -193,7 +193,7 @@ fi
 # Navega para uma pasta no git
 # Use esc para sair
 function cg {
-  sel=$( find ~/git -maxdepth 3 -type d |
+  sel=$( find ~/git -maxdepth 5 -type d |
     fzf --reverse -e -i --tiebreak=begin --prompt='Pasta no git: ' )
   [[ -z ${sel} ]] && return
   cd "$sel" || echo "Não consegui ir para ${sel}"
