@@ -190,3 +190,5 @@ fi
     fi
   done
 
+
+alias acksca="ack --ignore-dir=fdscacTest --ignore-dir=fdscac.code.generation"
