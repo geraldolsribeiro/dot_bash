@@ -155,9 +155,9 @@ fi
   export EDITOR=vim
   export TERM="xterm-256color"
 
-  #CDPATH=.:~:~/src:~/calculations:~/ssh_mounts
+  #CDPATH=.:~:~/src:~/calculations:~/ssh_mounts'
 
-  export CDPATH=.:~:~/git/Intmain:~/git/Taoker/
+  export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/Books/
 
   # >>> conda init >>>
   # !! Contents within this block are managed by 'conda init' !!
@@ -190,5 +190,13 @@ fi
     fi
   done
 
+# Navega para uma pasta no git
+# Use esc para sair
+function cg {
+  sel=$( find ~/git -maxdepth 5 -type d |
+    fzf --reverse -e -i --tiebreak=begin --prompt='Pasta no git: ' )
+  [[ -z ${sel} ]] && return
+  cd "$sel" || echo "Não consegui ir para ${sel}"
+}
 
 alias acksca="ack --ignore-dir=fdscacTest --ignore-dir=fdscac.code.generation"
