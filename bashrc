@@ -203,3 +203,11 @@ alias acksca="ack --ignore-dir=fdscacTest --ignore-dir=fdscac.code.generation"
 
 # https://github.com/sharkdp/bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+
+export NNN_BMS='d:~/Documents;g:~/git/Intmain;D:~/Downloads/'
+export NNN_SSHFS="sshfs -o follow_symlinks"        # make sshfs follow symlinks on the remote
+export NNN_COLORS="2136"                           # use a different color for each context
+export NNN_TRASH=1                                 # trash (needs trash-cli) instead of delete
+alias n='nnn -d'
+
