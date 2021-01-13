@@ -157,3 +157,5 @@ export FUSION_FONTS=~/.fonts/
 # para fazer a extensao pass_import ser localizado pelo pass
 # export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.5/site-packages/
 
+# Para ter acesso ao libnavajo
+LD_LIBRARY_PATH=/opt/intmain/dev/linux/usr/lib
