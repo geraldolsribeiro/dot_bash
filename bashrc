@@ -183,7 +183,8 @@ fi
   for d in \
     /usr/local/go/bin \
     /usr/lib/dart/bin \
-    /opt/flutter/bin
+    /opt/flutter/bin \
+    /usr/lib/go-1.14/bin
   do
     if [ -d "$d" ]; then
       export PATH=$PATH:$d
