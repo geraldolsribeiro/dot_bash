@@ -33,6 +33,13 @@ if [[ $platform == 'macos' ]]; then
 	export OS=macos
 fi
 
+case "$HOSTNAME" in
+  sites)
+    alias bash_ubuntu='make -C /opt/docker/docker-debian-dev/ bash_ubuntu'
+    alias bash_debian='make -C /opt/docker/docker-debian-dev/ bash_debian'
+    alias apt_debian='make -C /opt/intmain-apt/ q_all q_sync'
+esac
+
 # Configuração do git
 if [ ! -f "$HOME/.gitconfig" ] || [ "$HOME/.bashrc" -nt "$HOME/.gitconfig" ]
 then
@@ -214,3 +221,5 @@ export NNN_DE_FILE_MANAGER=nemo
 
 alias n='nnn -d'
 
+# Para ter acesso ao libnavajo
+LD_LIBRARY_PATH=/opt/intmain/dev/linux/usr/lib
