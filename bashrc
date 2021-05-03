@@ -1,4 +1,8 @@
 # set -x
+
+# Ctrl-a não travar a tela
+stty -ixon
+
 export PATH=~/bin:$PATH
 
 # shellcheck disable=SC1090
@@ -38,6 +42,11 @@ case "$HOSTNAME" in
     alias bash_ubuntu='make -C /opt/docker/docker-debian-dev/ bash_ubuntu'
     alias bash_debian='make -C /opt/docker/docker-debian-dev/ bash_debian'
     alias apt_debian='make -C /opt/intmain-apt/ q_all q_sync'
+    ;;
+  golf.local)
+    task sync
+    task context str
+    ;;
 esac
 
 # Configuração do git
