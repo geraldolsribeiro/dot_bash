@@ -14,7 +14,9 @@ O script `user-dir` configura os diretórios para inglês preservando o idioma d
 
 ## Nota
 
-Após a atualização para o Debian 10 uma mensagem de erro do ruby é exibida toda vez que executa o script de inicialização. Uma maneira de contornar este problema é usar o ruby na versão 3.0.6 (downgrade).
+Após a atualização para o Debian 10 uma mensagem de erro do ruby é exibida toda
+vez que executa o script de inicialização. Uma maneira de contornar este
+problema é usar o ruby na versão 3.0.6 (downgrade).
 
 ```bash
 gem update --system 3.0.6

@@ -45,7 +45,12 @@ case "$HOSTNAME" in
     ;;
   golf.local)
     task sync
-    task context str > /dev/null
+    task context str
+    task
+    ;;
+  dionisio)
+    task sync
+    task context intmain
     task
     ;;
 esac
