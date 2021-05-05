@@ -37,12 +37,15 @@ if [ $(command -v ccache > /dev/null) ]; then
   ccache -C > /dev/null
 fi
 
-for d in ~/.ack ~/.vim ~/.config/ranger/ ~/.fonts ~/.clang/ ~/.tmux ~/.bash ~/.local/share/nemo/
-do
-  if [ -d "$d" ]; then
-    pushd "$d" || return
-    git pull origin master
-    popd || return
-  fi
-done
+if test "$( find ~/.git_last_update -mmin +30 )"; then
+  touch ~/.git_last_update
+  for d in ~/.ack ~/.vim ~/.config/ranger/ ~/.fonts ~/.clang/ ~/.tmux ~/.bash ~/.local/share/nemo/
+  do
+    if [ -d "$d" ]; then
+      pushd "$d" || return
+      git pull origin master
+      popd || return
+    fi
+  done
+fi
 
