@@ -37,7 +37,8 @@ if [ $(command -v ccache > /dev/null) ]; then
   ccache -C > /dev/null
 fi
 
-if test "$( find ~/.git_last_update -mmin +30 )"; then
+# Atualiza configuração dos programas mais utilizados
+if [ ! -f ~/.git_last_update ] || [ -n "$( find ~/ -maxdepth 0 -name .git_last_update -mmin +30 )" ]; then
   touch ~/.git_last_update
   for d in ~/.ack ~/.vim ~/.config/ranger/ ~/.fonts ~/.clang/ ~/.tmux ~/.bash ~/.local/share/nemo/
   do
@@ -47,5 +48,7 @@ if test "$( find ~/.git_last_update -mmin +30 )"; then
       popd || return
     fi
   done
+else
+  echo "Configurações estão atualizadas!"
 fi
 

@@ -24,7 +24,6 @@ else
   echo "Not supported platform: $unamestr"
 fi
 
-
 if [[ $platform == 'macos' ]]; then
   alias ctags="$(/usr/local/bin/brew --prefix)/bin/ctags"
 	alias vim='mvim -vf'
@@ -133,8 +132,6 @@ fi
 
   export PS1="\$(last_cmd_status) ${PS_USER_COLOR} ${USER} ${PS_USER_ICON} ${HOST_COLOR} @\h ${PATH_COLOR} \w ${GIT_COLOR} \$(parse_git_branch) ${RESET_COLOR}\n\$ "
 
-
-
   PATH="/home/intmain/geraldoim/perl5/bin${PATH:+:${PATH}}"; export PATH;
   PERL5LIB="/home/intmain/geraldoim/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
   PERL_LOCAL_LIB_ROOT="/home/intmain/geraldoim/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
@@ -238,3 +235,7 @@ alias n='nnn -d'
 
 # Para ter acesso ao libnavajo
 LD_LIBRARY_PATH=/opt/intmain/dev/linux/usr/lib
+
+# Ajuda a debugar o git. Quebra o git gui
+# export GIT_TRACE2=2
+# export GIT_CURL_VERBOSE=1
