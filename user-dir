@@ -1,6 +1,16 @@
-# Quero manter o idioma me pt_BR, mas padronizar os diretórios em en_US
-# apt install xdg-user-dirs 
-if hash xdg-user-dirs-update > /dev/null; then
+# ----------------------------------------------------------------------
+# Copyright (C) 2017-2021 Geraldo Ribeiro <geraldo@intmain.io>
+# ----------------------------------------------------------------------
+#
+#   ## Configuração diretórios de usuário
+#   
+#   Quero manter o idioma me `pt_BR`, mas padronizar os diretórios em `en_US`.
+#   
+#   ## Dependências
+#   
+#   * `apt install xdg-user-dirs`
+#{{{
+if hash xdg-user-dirs-update > /dev/null 2> /dev/null; then
   [ -d "$HOME/Área de trabalho" ] && mv "$HOME/Área de trabalho" "$HOME/Desktop"
   [ -d "$HOME/Documentos" ]       && mv "$HOME/Documentos"       "$HOME/Documents"
   [ -d "$HOME/Imagens" ]          && mv "$HOME/Imagens"          "$HOME/Pictures"
@@ -27,3 +37,6 @@ if hash xdg-user-dirs-update > /dev/null; then
   xdg-user-dirs-update --set PICTURES    "$HOME/Pictures"
   xdg-user-dirs-update --set VIDEOS      "$HOME/Videos"
 fi
+#}}}
+
+# vim: ft=sh
