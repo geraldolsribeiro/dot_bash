@@ -52,3 +52,8 @@ else
   echo "Configurações estão atualizadas!"
 fi
 
+# Remove arquivos objeto
+for d in ~/git/Intmain ~/git/Taoker
+do
+ find $d -name "*.o" -delete
+done
