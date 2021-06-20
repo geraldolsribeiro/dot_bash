@@ -239,3 +239,5 @@ LD_LIBRARY_PATH=/opt/intmain/dev/linux/usr/lib
 # Ajuda a debugar o git. Quebra o git gui
 # export GIT_TRACE2=2
 # export GIT_CURL_VERBOSE=1
+
+alias cdmt="pushd /home/geraldo/metatrader-wine/drive_c/Program\ Files/Rico\ -\ MetaTrader\ 5/MQL5/Experts/Intmain/"
