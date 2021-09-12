@@ -3,6 +3,8 @@
 # Ctrl-a não travar a tela
 stty -ixon
 
+setterm --powerdown 1
+
 export PATH=~/bin:$PATH
 
 # shellcheck disable=SC1090
