@@ -5,6 +5,13 @@ stty -ixon
 
 export PATH=~/bin:$PATH
 
+
+# https://grpc.io/docs/languages/cpp/quickstart/
+export MY_INSTALL_DIR=$HOME/.local
+mkdir -p "$MY_INSTALL_DIR"
+export PATH="$MY_INSTALL_DIR/bin:$PATH"
+
+
 # shellcheck disable=SC1090
 source "$HOME/.bash/bashrc_cb"
 
