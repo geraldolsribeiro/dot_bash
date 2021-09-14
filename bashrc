@@ -3,6 +3,8 @@
 # Ctrl-a não travar a tela
 stty -ixon
 
+setterm --powerdown 1
+
 export PATH=~/bin:$PATH
 
 
@@ -248,3 +250,8 @@ LD_LIBRARY_PATH=/opt/intmain/dev/linux/usr/lib
 # export GIT_CURL_VERBOSE=1
 
 alias cdmt="pushd /home/geraldo/metatrader-wine/drive_c/Program\ Files/Rico\ -\ MetaTrader\ 5/MQL5/Experts/Intmain/"
+alias mt64="WINEPREFIX=/home/geraldo/metatrader-wine wine64-development /home/geraldo/metatrader-wine/drive_c/Program\ Files/Rico\ -\ MetaTrader\ 5/terminal64.exe"
+
+# zapcc - compilador mais rápido
+# git@github.com:yrnkrn/zapcc.git
+export PATH=$PATH:~/git/github/llvm/build/bin/
