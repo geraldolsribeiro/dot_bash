@@ -255,3 +255,7 @@ alias mt64="WINEPREFIX=/home/geraldo/metatrader-wine wine64-development /home/ge
 # zapcc - compilador mais rápido
 # git@github.com:yrnkrn/zapcc.git
 export PATH=$PATH:~/git/github/llvm/build/bin/
+
+if [ -f /usr/bin/sct ]; then
+  sct 3500
+fi
