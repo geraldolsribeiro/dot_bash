@@ -38,14 +38,25 @@ if [ $(command -v ccache > /dev/null) ]; then
 fi
 
 # Atualiza configuração dos programas mais utilizados
-if [ ! -f ~/.git_last_update ] || [ -n "$( find ~/ -maxdepth 0 -name .git_last_update -mmin +30 )" ]; then
+if [ ! -f ~/.git_last_update ] || [ -n "$( find ~/ -maxdepth 0 -name .git_last_update -mmin +600 )" ]; then
   touch ~/.git_last_update
-  for d in ~/.ack ~/.vim ~/.config/ranger/ ~/.fonts ~/.clang/ ~/.tmux ~/.bash ~/.local/share/nemo/
+  for d in \
+    ~/.ack \
+    ~/.vim \
+    ~/.config/ranger/ \
+    ~/.fonts ~/.clang/ \
+    ~/.tmux \
+    ~/.bash \
+    ~/.local/share/nemo/ \
+    ~/.config/zim/
   do
     if [ -d "$d" ]; then
+      echo "Atualizando $d"
       pushd "$d" || return
       git pull origin master
       popd || return
+    else
+      echo "Configuração $d não encontrada"
     fi
   done
 else
