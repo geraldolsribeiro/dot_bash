@@ -42,13 +42,15 @@ if [ ! -f ~/.git_last_update ] || [ -n "$( find ~/ -maxdepth 0 -name .git_last_u
   touch ~/.git_last_update
   for d in \
     ~/.ack \
-    ~/.vim \
-    ~/.config/ranger/ \
-    ~/.fonts ~/.clang/ \
-    ~/.tmux \
     ~/.bash \
+    ~/.clang/ \
+    ~/.config/ranger/ \
+    ~/.config/zim/ \
+    ~/.fonts \
+    ~/.git \
     ~/.local/share/nemo/ \
-    ~/.config/zim/
+    ~/.tmux \
+    ~/.vim
   do
     if [ -d "$d" ]; then
       echo "Atualizando $d"
