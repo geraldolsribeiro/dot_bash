@@ -69,26 +69,26 @@ then
   case "$USER" in
     "") # no docker USER não é configurado
       git config --global user.name "Geraldo Intmain"
-      git config --global user.email geraldolsribeiroim@gmail.com
+      git config --global user.email "geraldolsribeiroim@gmail.com"
       ;;
     geraldo)
       git config --global user.name "Geraldo Ribeiro"
       case "$HOSTNAME" in
         golf*)
-          git config --global user.email geraldo@stefaninirafael.com
+          git config --global user.email "geraldo@stefaninirafael.com"
           ;;
         *)
-          git config --global user.email geraldolsribeiro@gmail.com
+          git config --global user.email "geraldolsribeiro@gmail.com"
           ;;
       esac
       ;;
     geraldoim)
       git config --global user.name "Geraldo Intmain"
-      git config --global user.email geraldolsribeiroim@gmail.com
+      git config --global user.email "geraldolsribeiroim@gmail.com"
       ;;
     geraldotk)
       git config --global user.name "Geraldo Taoker"
-      git config --global user.email geraldolsribeirotk@gmail.com
+      git config --global user.email "geraldolsribeirotk@gmail.com"
       ;;
   esac
   git config --global core.editor vim
