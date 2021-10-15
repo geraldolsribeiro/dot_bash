@@ -212,7 +212,8 @@ fi
     /usr/local/go/bin \
     /usr/lib/dart/bin \
     /opt/flutter/bin \
-    /usr/lib/go-1.14/bin
+    /usr/lib/go-1.14/bin \
+    $HOME/git/github/git-fuzzy/bin
   do
     if [ -d "$d" ]; then
       export PATH=$PATH:$d
@@ -228,6 +229,7 @@ function cg {
   cd "$sel" || echo "Não consegui ir para ${sel}"
 }
 
+# Busca para o projeto FDSCAC
 alias acksca="ack --ignore-dir=fdscacTest --ignore-dir=fdscac.code.generation"
 
 # https://github.com/sharkdp/bat
@@ -256,6 +258,7 @@ alias mt64="WINEPREFIX=/home/geraldo/metatrader-wine wine64-development /home/ge
 # git@github.com:yrnkrn/zapcc.git
 export PATH=$PATH:~/git/github/llvm/build/bin/
 
+# Ajusta a temperatura de cor
 if [ -f /usr/bin/sct ]; then
   sct 3500
 fi
