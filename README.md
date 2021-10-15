@@ -1,3 +1,4 @@
+[//]: <> (Documentação gerada com intmain_docmd)
 # Configuração do bash
 
 ## Instalação
