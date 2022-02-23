@@ -81,8 +81,8 @@ case "$HOSTNAME" in
     ;;
   golf.local)
     # task sync # Atrasa a abertura do novo terminal
-    task context str
-    task
+    # task context str
+    # task
     ;;
   dionisio)
     # task sync
@@ -121,6 +121,12 @@ then
   esac
   git config --global core.editor vim
   git config --global merge.tool vimdiff
+
+  # gitignore no git gui
+  git config --global guitool."Add to .gitignore".cmd $'echo "\n$FILENAME" >> .gitignore & git add .gitignore'
+  git config --global guitool."Add to .gitignore".needsfile yes
+  git config --global guitool."Add to .gitignore".confirm yes
+
   #git config --global pack.threads 1
   #git config --global pack.packSizeLimit 128m
   #git config --global pack.deltaCacheSize 128m
@@ -233,10 +239,11 @@ export FUSION_FONTS=~/.fonts/
 # para fazer a extensao pass_import ser localizado pelo pass
 # export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.5/site-packages/
 
+# Tem uma versão do dart junto com o flutter, vou usar ela em vez do instalado no sistema
 for d in \
   /usr/local/go/bin \
-  /usr/lib/dart/bin \
   /opt/flutter/bin \
+  /usr/lib/dart/bin \
   /usr/lib/go-1.14/bin \
   $HOME/git/github/git-fuzzy/bin
 do
@@ -291,4 +298,6 @@ if [ -f /usr/bin/sct ]; then
   sct 3500
 fi
 
+trap 'echo "🚧 ocorreu um erro no ${FUNCNAME:-terminal} 🚧"' ERR
 
+# export PS1='> '
