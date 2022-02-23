@@ -37,6 +37,8 @@ if [ $(command -v ccache > /dev/null) ]; then
   ccache -C > /dev/null
 fi
 
+npm cache clean --force
+
 # Atualiza configuração dos programas mais utilizados
 if [ ! -f ~/.git_last_update ] || [ -n "$( find ~/ -maxdepth 0 -name .git_last_update -mmin +600 )" ]; then
   touch ~/.git_last_update
@@ -66,7 +68,8 @@ else
 fi
 
 # Remove arquivos objeto
-for d in ~/git/Intmain ~/git/Taoker
-do
- find $d -name "*.o" -delete
-done
+# for d in ~/git/Intmain ~/git/Taoker
+# do
+#  echo "Limpando compilações antigas"
+#  find $d -name "*.o" -delete
+# done
