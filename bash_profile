@@ -48,6 +48,7 @@ if [ ! -f ~/.git_last_update ] || [ -n "$( find ~/ -maxdepth 0 -name .git_last_u
     ~/.clang/ \
     ~/.config/ranger/ \
     ~/.config/zim/ \
+    ~/.config/Thunar/ \
     ~/.fonts \
     ~/.git \
     ~/.local/share/nemo/ \
