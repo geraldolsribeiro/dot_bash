@@ -215,7 +215,7 @@ export TERM="xterm-256color"
 
 #CDPATH=.:~:~/src:~/calculations:~/ssh_mounts'
 
-export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/Books/
+export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/Books/:~/git/StefaniniRafael
 
 
 # >>> conda init >>>
@@ -297,6 +297,13 @@ source /etc/profile.d/bash_completion.sh
 if [ -f /usr/bin/sct ]; then
   sct 3500
 fi
+
+# Exibe uma dica aleatória
+if [ ! -d ~/git/github/til ]; then
+  mkdir -p ~/git/github/
+  git clone https://github.com/jbranchaud/til.git ~/git/github/til
+fi
+bat "$(find ~/git/github/til/ -name "*.md" | shuf -n 1)"
 
 trap 'echo "🚧 ocorreu um erro no ${FUNCNAME:-terminal} 🚧"' ERR
 
