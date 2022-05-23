@@ -252,6 +252,8 @@ do
   fi
 done
 
+source ~/.bash/remind
+
 # Navega para uma pasta no git
 # Use esc para sair
 function cg {
@@ -299,11 +301,11 @@ if [ -f /usr/bin/sct ]; then
 fi
 
 # Exibe uma dica aleatória
-if [ ! -d ~/git/github/til ]; then
-  mkdir -p ~/git/github/
-  git clone https://github.com/jbranchaud/til.git ~/git/github/til
-fi
-bat "$(find ~/git/github/til/ -name "*.md" | shuf -n 1)"
+# if [ ! -d ~/git/github/til ]; then
+#   mkdir -p ~/git/github/
+#   git clone https://github.com/jbranchaud/til.git ~/git/github/til
+# fi
+# bat "$(find ~/git/github/til/ -name "*.md" | shuf -n 1)"
 
 trap 'echo "🚧 ocorreu um erro no ${FUNCNAME:-terminal} 🚧"' ERR
 

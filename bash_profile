@@ -37,7 +37,7 @@ if [ $(command -v ccache > /dev/null) ]; then
   ccache -C > /dev/null
 fi
 
-npm cache clean --force
+# npm cache clean --force
 
 # Atualiza configuração dos programas mais utilizados
 if [ ! -f ~/.git_last_update ] || [ -n "$( find ~/ -maxdepth 0 -name .git_last_update -mmin +600 )" ]; then
@@ -65,7 +65,7 @@ if [ ! -f ~/.git_last_update ] || [ -n "$( find ~/ -maxdepth 0 -name .git_last_u
     fi
   done
 else
-  echo "Configurações estão atualizadas!"
+  echo "Configurações estão atualizadas!" > /dev/null
 fi
 
 # Remove arquivos objeto
