@@ -4,13 +4,15 @@
 #
 #   ## Configuração diretórios de usuário
 #   
-#   Quero manter o idioma me `pt_BR`, mas padronizar os diretórios em `en_US`.
+#   Quero manter o idioma em `pt_BR`, mas padronizar os diretórios em `en_US`.
 #   
 #   ## Dependências
 #   
 #   * `apt install xdg-user-dirs`
+#   
 #{{{
 if hash xdg-user-dirs-update > /dev/null 2> /dev/null; then
+  # Move pasta antiga, se existir
   [ -d "$HOME/Área de trabalho" ] && mv "$HOME/Área de trabalho" "$HOME/Desktop"
   [ -d "$HOME/Documentos" ]       && mv "$HOME/Documentos"       "$HOME/Documents"
   [ -d "$HOME/Imagens" ]          && mv "$HOME/Imagens"          "$HOME/Pictures"

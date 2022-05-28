@@ -1,0 +1,28 @@
+
+
+for d in \
+  ~/.ack \
+  ~/.bash \
+  ~/.clang/ \
+  ~/.config/ranger/ \
+  ~/.config/zim/ \
+  ~/.config/Thunar/ \
+  ~/.config/fman/ \
+  ~/.dwm/ \
+  ~/.fonts \
+  ~/.git \
+  ~/.local/share/nemo/ \
+  ~/.tmux \
+  ~/.vim
+do
+  if [ -d "$d" ]; then
+    echo "Atualizando $d"
+    pushd "$d" || return
+    git pull origin master
+    popd || return
+  else
+    echo "Configuração $d não encontrada"
+  fi
+done
+
+# vim: ft=bash

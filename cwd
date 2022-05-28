@@ -1,0 +1,10 @@
+function cwd () {
+  if [ -z "$CWD" ]; then
+    export CWD=${PWD}
+    echo "Salvo ${CWD}"
+  else
+    cd ${CWD}
+  fi
+}
+
+# vim: ft=bash
