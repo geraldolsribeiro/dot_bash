@@ -42,29 +42,7 @@ fi
 # Atualiza configuração dos programas mais utilizados
 if [ ! -f ~/.git_last_update ] || [ -n "$( find ~/ -maxdepth 0 -name .git_last_update -mmin +600 )" ]; then
   touch ~/.git_last_update
-  for d in \
-    ~/.ack \
-    ~/.bash \
-    ~/.clang/ \
-    ~/.config/ranger/ \
-    ~/.config/zim/ \
-    ~/.config/Thunar/ \
-    ~/.config/fman/ \
-    ~/.fonts \
-    ~/.git \
-    ~/.local/share/nemo/ \
-    ~/.tmux \
-    ~/.vim
-  do
-    if [ -d "$d" ]; then
-      echo "Atualizando $d"
-      pushd "$d" || return
-      git pull origin master
-      popd || return
-    else
-      echo "Configuração $d não encontrada"
-    fi
-  done
+  source ~/.bash/git_update
 else
   echo "Configurações estão atualizadas!" > /dev/null
 fi
@@ -76,6 +54,7 @@ fi
 #  find $d -name "*.o" -delete
 # done
 
-
 export DENO_INSTALL="/home/geraldo/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# vim: ft=bash

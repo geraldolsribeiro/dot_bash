@@ -253,6 +253,7 @@ do
 done
 
 source ~/.bash/remind
+source ~/.bash/cwd
 
 # Navega para uma pasta no git
 # Use esc para sair
@@ -295,9 +296,17 @@ export PATH=$PATH:~/git/github/llvm/build/bin/
 
 source /etc/profile.d/bash_completion.sh
 
+export PATH=$PATH:~/.config/rofi/bin
+
+# redshift alternative
 # Ajusta a temperatura de cor
 if [ -f /usr/bin/sct ]; then
-  sct 3500
+  # for i in $(seq 6500 -100 4000)
+  # do
+  #   sct $i
+  #   sleep 0.1
+  # done
+  sct 4000
 fi
 
 # Exibe uma dica aleatória
