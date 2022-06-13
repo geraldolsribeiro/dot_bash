@@ -75,3 +75,7 @@ fi
 #  echo "Limpando compilações antigas"
 #  find $d -name "*.o" -delete
 # done
+
+
+export DENO_INSTALL="/home/geraldo/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
