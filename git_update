@@ -13,7 +13,8 @@ for d in \
   ~/.git \
   ~/.local/share/nemo/ \
   ~/.tmux \
-  ~/.vim
+  ~/.vim \
+  ~/.GrTooltip
 do
   if [ -d "$d" ]; then
     echo "Atualizando $d"
