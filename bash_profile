@@ -57,4 +57,6 @@ fi
 export DENO_INSTALL="/home/geraldo/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+export PATH="$PATH:/snap/bin/"
+
 # vim: ft=bash
