@@ -86,8 +86,8 @@ case "$HOSTNAME" in
     ;;
   dionisio)
     # task sync
-    task context intmain
-    task
+    # task context intmain
+    # task
     ;;
 esac
 
@@ -142,19 +142,6 @@ fi
 #   win64) PS_OS_ICON="❖" ;;
 # esac
 
-case "$USER" in
-  flavia)     PS_USER_ICON="ⓕ"; PS_USER_COLOR="\[$(tput setab 2)$(tput setaf 0)\]";  ;;
-  geraldo)    PS_USER_ICON="ⓖ"; PS_USER_COLOR="\[$(tput setab 2)$(tput setaf 0)\]";  ;;
-  anderson)   PS_USER_ICON="ⓐ"; PS_USER_COLOR="\[$(tput setab 2)$(tput setaf 0)\]";  ;;
-  geraldoim)  PS_USER_ICON="ⓘ"; PS_USER_COLOR="\[$(tput setab 2)$(tput setaf 0)\]"; ;;
-  andersonim) PS_USER_ICON="ⓘ"; PS_USER_COLOR="\[$(tput setab 2)$(tput setaf 0)\]"; ;;
-  geraldotk)  PS_USER_ICON="ⓣ"; PS_USER_COLOR="\[$(tput setab 2)$(tput setaf 0)\]";  ;;
-  andersontk) PS_USER_ICON="ⓣ"; PS_USER_COLOR="\[$(tput setab 2)$(tput setaf 0)\]";  ;;
-  miguel)     PS_USER_ICON="ⓜ"; PS_USER_COLOR="\[$(tput setab 2)$(tput setaf 0)\]";  ;;
-  root)       PS_USER_ICON="♔";	 PS_USER_COLOR="\[$(tput setab 2)$(tput setaf 0)\]"; ;;
-esac
-
-
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
@@ -167,13 +154,16 @@ last_cmd_status() {
   fi
 }
 
+# shellcheck source=$HOME/.bash/pomodoro.bash
+source "$HOME/.bash/pomodoro.bash"
+
 # 0 – Black; 1 – Red; 2 – Green; 3 – Yellow; 4 – Blue; 5 – Magenta; 6 – Cyan; 7 – White;
 RESET_COLOR="\[$(tput sgr0)\]"
 GIT_COLOR="\[$(tput setab 7)$(tput setaf 1)\]"
 PATH_COLOR="\[$(tput setab 2)$(tput setaf 0)\]"
 HOST_COLOR="\[$(tput setab 4)$(tput setaf 7)\]"
 
-export PS1="\$(last_cmd_status) ${PS_USER_COLOR} ${USER} ${PS_USER_ICON} ${HOST_COLOR} @\h ${PATH_COLOR} \w ${GIT_COLOR} \$(parse_git_branch) ${RESET_COLOR}\n\$ "
+export PS1="\$(last_cmd_status)\$(pomodoro_time) ${PS_USER_COLOR} ${USER} ${HOST_COLOR} @\h ${PATH_COLOR} \w ${GIT_COLOR} \$(parse_git_branch) ${RESET_COLOR}\n\$ "
 
 PATH="/home/intmain/geraldoim/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/intmain/geraldoim/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
