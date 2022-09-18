@@ -163,7 +163,7 @@ GIT_COLOR="\[$(tput setab 7)$(tput setaf 1)\]"
 PATH_COLOR="\[$(tput setab 2)$(tput setaf 0)\]"
 HOST_COLOR="\[$(tput setab 4)$(tput setaf 7)\]"
 
-export PS1="\$(last_cmd_status)\$(pomodoro_time) ${PS_USER_COLOR} ${USER} ${HOST_COLOR} @\h ${PATH_COLOR} \w ${GIT_COLOR} \$(parse_git_branch) ${RESET_COLOR}\n\$ "
+export PS1="\$(last_cmd_status)\$(pomodoro_time) ${PS_USER_COLOR} ${USER}${HOST_COLOR}@\h ${PATH_COLOR} \w ${GIT_COLOR} \$(parse_git_branch) ${RESET_COLOR}\n\$ "
 
 PATH="/home/intmain/geraldoim/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/intmain/geraldoim/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
