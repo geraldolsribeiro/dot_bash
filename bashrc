@@ -189,7 +189,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # FZF
-# Primeira instalacao:
+# Primeira instalação:
 #   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 #   ~/.fzf/install
 # Atualizacao:
