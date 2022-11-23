@@ -4,12 +4,13 @@ for d in \
   ~/.ack \
   ~/.bash \
   ~/.clang/ \
-  ~/.config/ranger/ \
-  ~/.config/zim/ \
-  ~/.config/Thunar/ \
   ~/.config/fman/ \
+  ~/.config/ranger/ \
+  ~/.config/Thunar/ \
+  ~/.config/zim/ \
   ~/.dwm/ \
   ~/.fonts \
+  ~/.fzf/ \
   ~/.git \
   ~/.local/share/nemo/ \
   ~/.tmux \
@@ -25,5 +26,9 @@ do
     echo "Configuração $d não encontrada"
   fi
 done
+
+if [ -d ~/.fzf ]; then
+  cd ~/.fzf/ && ./install
+fi
 
 # vim: ft=bash
