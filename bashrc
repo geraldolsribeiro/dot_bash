@@ -154,6 +154,12 @@ last_cmd_status() {
   fi
 }
 
+alias docker-clean=' \
+  docker container prune -f ; \
+  docker image prune -f ; \
+  docker network prune -f ; \
+  docker volume prune -f '
+
 # shellcheck source=$HOME/.bash/pomodoro.bash
 source "$HOME/.bash/pomodoro.bash"
 
@@ -199,6 +205,7 @@ alias t="todo-txt -d ~/todo/config"
 alias k="vim ~/imbok/content/chapter-misc/"
 alias gotk="dm-tool switch-to-user geraldotk"
 alias goim="dm-tool switch-to-user geraldoim"
+alias xclip="xclip -selection clipboard"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export EDITOR=vim
 export TERM="xterm-256color"
@@ -286,7 +293,7 @@ export PATH=$PATH:~/git/github/llvm/build/bin/
 
 source /etc/profile.d/bash_completion.sh
 
-export PATH=$PATH:~/.config/rofi/bin
+export PATH="$PATH:~/.config/rofi/bin:/snap/bin:/sbin"
 
 # redshift alternative
 # Ajusta a temperatura de cor
@@ -308,4 +315,3 @@ fi
 
 trap 'echo "🚧 ocorreu um erro no ${FUNCNAME:-terminal} 🚧"' ERR
 
-# export PS1='> '
