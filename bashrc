@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------
-# Copyright (C) 2017-2021 Geraldo Ribeiro <geraldo@intmain.io>
+# Copyright (C) 2017-2023 Geraldo Ribeiro <geraldo@intmain.io>
 # ----------------------------------------------------------------------
 
 #   # Configuração do bash
@@ -153,6 +153,9 @@ last_cmd_status() {
     echo "🔥"
   fi
 }
+
+# calendar with week day starting on Monday
+alias cal='gcal -K -s 1'
 
 alias docker-clean=' \
   docker container prune -f ; \
@@ -315,3 +318,4 @@ fi
 
 trap 'echo "🚧 ocorreu um erro no ${FUNCNAME:-terminal} 🚧"' ERR
 
+. "$HOME/.cargo/env"
