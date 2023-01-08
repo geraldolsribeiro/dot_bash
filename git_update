@@ -15,7 +15,9 @@ for d in \
   ~/.local/share/nemo/ \
   ~/.tmux \
   ~/.vim \
-  ~/.GrTooltip
+  ~/.GrTooltip \
+  ~/.config/Florian_Hackenberger \
+  ~/bin
 do
   if [ -d "$d" ]; then
     echo "Atualizando $d"
@@ -28,7 +30,7 @@ do
 done
 
 if [ -d ~/.fzf ]; then
-  cd ~/.fzf/ && ./install
+  pushd ~/.fzf/ && ./install && popd
 fi
 
 # vim: ft=bash
