@@ -22,6 +22,10 @@ do
   if [ -d "$d" ]; then
     echo "Atualizando $d"
     pushd "$d" || return
+    n=$(git diff | wc -l)
+    if [ "$n" -gt 0 ]; then
+      git gui
+    fi
     git pull origin master
     popd || return
   else
