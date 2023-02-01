@@ -163,6 +163,8 @@ alias docker-clean=' \
   docker network prune -f ; \
   docker volume prune -f '
 
+alias cdtil='pushd ~/git/Intmain/site-geraldo-dot-dev/src/content/til'
+
 # shellcheck source=$HOME/.bash/pomodoro.bash
 source "$HOME/.bash/pomodoro.bash"
 

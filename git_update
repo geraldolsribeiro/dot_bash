@@ -1,6 +1,8 @@
 
 
 for d in \
+  ~/git/Intmain/language_cpp \
+  ~/git/Intmain/site-geraldo-dot-dev \
   ~/.ack \
   ~/.bash \
   ~/.clang/ \
@@ -24,7 +26,12 @@ do
     pushd "$d" || return
     n=$(git diff | wc -l)
     if [ "$n" -gt 0 ]; then
-      git gui
+      if [ ! -z "$DISPLAY" ]; then
+        git gui
+      else
+        echo "Provide TUI git alternative"
+        exit 1
+      fi
     fi
     git pull origin master
     popd || return
