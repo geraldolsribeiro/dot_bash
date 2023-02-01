@@ -33,7 +33,7 @@ do
         exit 1
       fi
     fi
-    git pull origin master
+    git pull origin master || git pull origin main
     popd || return
   else
     echo "Configuração $d não encontrada"
