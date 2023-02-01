@@ -318,4 +318,6 @@ fi
 
 trap 'echo "🚧 ocorreu um erro no ${FUNCNAME:-terminal} 🚧"' ERR
 
+if [ -f "$HOME/.cargo/env" ]; then
 . "$HOME/.cargo/env"
+fi
