@@ -14,6 +14,7 @@ for d in \
   ~/.fonts \
   ~/.fzf/ \
   ~/.git \
+  ~/.gdb \
   ~/.local/share/nemo/ \
   ~/.tmux \
   ~/.vim \
