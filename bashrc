@@ -217,7 +217,7 @@ export TERM="xterm-256color"
 
 #CDPATH=.:~:~/src:~/calculations:~/ssh_mounts'
 
-export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/Books/:~/git/StefaniniRafael:~/git/github
+export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/Books/:~/git/StefaniniRafael:~/git/github:~/Seafile/
 
 
 # >>> conda init >>>
