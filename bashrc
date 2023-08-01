@@ -154,6 +154,8 @@ last_cmd_status() {
   fi
 }
 
+alias e='${EDITOR:-vim} $(fzf --multi)'
+
 # calendar with week day starting on Monday
 alias cal='gcal -K -s 1'
 
