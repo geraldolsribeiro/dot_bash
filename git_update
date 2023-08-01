@@ -4,6 +4,8 @@ for d in \
   ~/git/Intmain/language_cpp \
   ~/git/Intmain/site-geraldo-dot-dev \
   ~/.ack \
+  ~/.ssh \
+  ~/.gnupg/ \
   ~/.bash \
   ~/.clang/ \
   ~/.config/fman/ \
