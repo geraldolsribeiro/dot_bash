@@ -92,7 +92,7 @@ case "$HOSTNAME" in
 esac
 
 # Configuração do git
-if [ ! -f "$HOME/.gitconfig" ] || [ "$HOME/.bashrc" -nt "$HOME/.gitconfig" ]
+if [ ! -f "$HOME/.gitconfig" ] || [ "$HOME/.bash/bashrc" -nt "$HOME/.gitconfig" ]
 then
   case "$USER" in
     "") # no docker USER não é configurado
@@ -102,6 +102,9 @@ then
     geraldo)
       git config --global user.name "Geraldo Ribeiro"
       case "$HOSTNAME" in
+        geraldo*)
+          git config --global user.email "geraldo.ribeiro@digital14.com"
+          ;;
         golf*)
           git config --global user.email "geraldo@stefaninirafael.com"
           ;;
@@ -217,7 +220,17 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export EDITOR=vim
 export TERM="xterm-256color"
 
-#CDPATH=.:~:~/src:~/calculations:~/ssh_mounts'
+if [ -x /usr/bin/lsd ]; then
+  alias ls='lsd'
+fi
+
+# https://github.com/sharkdp/vivid
+if [ -x /usr/bin/vivid ]; then
+  # To preview themes
+  # for theme in $(vivid themes); do echo "Theme: $theme" LS_COLORS=$(vivid generate $theme) ls echo done
+  # molokai
+  export LS_COLORS="$( vivid generate one-dark )"
+fi
 
 export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/Books/:~/git/StefaniniRafael:~/git/github:~/Seafile/
 
