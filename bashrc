@@ -92,7 +92,7 @@ case "$HOSTNAME" in
 esac
 
 # Configuração do git
-if [ ! -f "$HOME/.gitconfig" ] || [ "$HOME/.bashrc" -nt "$HOME/.gitconfig" ]
+if [ ! -f "$HOME/.gitconfig" ] || [ "$HOME/.bash/bashrc" -nt "$HOME/.gitconfig" ]
 then
   case "$USER" in
     "") # no docker USER não é configurado
@@ -102,6 +102,9 @@ then
     geraldo)
       git config --global user.name "Geraldo Ribeiro"
       case "$HOSTNAME" in
+        geraldo*)
+          git config --global user.email "geraldo.ribeiro@digital14.com"
+          ;;
         golf*)
           git config --global user.email "geraldo@stefaninirafael.com"
           ;;
