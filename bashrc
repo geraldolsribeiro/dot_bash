@@ -217,7 +217,17 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export EDITOR=vim
 export TERM="xterm-256color"
 
-#CDPATH=.:~:~/src:~/calculations:~/ssh_mounts'
+if [ -x /usr/bin/lsd ]; then
+  alias ls='lsd'
+fi
+
+# https://github.com/sharkdp/vivid
+if [ -x /usr/bin/vivid ]; then
+  # To preview themes
+  # for theme in $(vivid themes); do echo "Theme: $theme" LS_COLORS=$(vivid generate $theme) ls echo done
+  # molokai
+  export LS_COLORS="$( vivid generate one-dark )"
+fi
 
 export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/Books/:~/git/StefaniniRafael:~/git/github:~/Seafile/
 
