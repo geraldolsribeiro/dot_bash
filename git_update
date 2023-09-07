@@ -22,6 +22,7 @@ for d in \
   ~/.vim \
   ~/.GrTooltip \
   ~/.config/Florian_Hackenberger \
+  ~/.config/xournalpp \
   ~/bin
 do
   if [ -d "$d" ]; then
