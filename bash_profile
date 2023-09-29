@@ -59,4 +59,3 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 
 # vim: ft=bash
-. "$HOME/.cargo/env"
