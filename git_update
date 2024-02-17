@@ -1,4 +1,5 @@
 
+REPOS="${HOME}/.bash/repos.txt"
 
 for d in \
   ~/git/Intmain/language_cpp \
@@ -28,6 +29,8 @@ do
   if [ -d "$d/.git" ]; then
     echo "Atualizando $d..."
     pushd "$d" || return
+    remote=$( git remote -v | awk '{ print $2 }' | uniq )
+    echo "git clone ${remote} ${d}" >> "${REPOS}"
     n=$(git diff | wc -l)
     if [ "$n" -gt 0 ]; then
       if [ ! -z "$DISPLAY" ]; then
@@ -43,6 +46,7 @@ do
     echo "Configuração $d não encontrada"
   fi
 done
+sort -u -o "${REPOS}" "${REPOS}"
 
 if [ -d ~/.fzf ]; then
   pushd ~/.fzf/ && ./install && popd
