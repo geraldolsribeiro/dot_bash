@@ -258,6 +258,8 @@ export FUSION_FONTS=~/.fonts/
 
 # Tem uma versão do dart junto com o flutter, vou usar ela em vez do instalado no sistema
 for d in \
+  /opt/st/stm32cubeide_1.14.0/ \
+  /home/geraldo/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin \
   /usr/local/go/bin \
   /opt/flutter/bin \
   /usr/lib/dart/bin \
