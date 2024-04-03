@@ -33,12 +33,7 @@ do
     echo "git clone ${remote} ${d}" >> "${REPOS}"
     n=$(git diff | wc -l)
     if [ "$n" -gt 0 ]; then
-      if [ ! -z "$DISPLAY" ]; then
-        git gui
-      else
-        echo "Provide TUI git alternative"
-        exit 1
-      fi
+      lazygit
     fi
     git pull origin master || git pull origin main
     popd || return
