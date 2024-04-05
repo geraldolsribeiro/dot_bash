@@ -26,3 +26,6 @@ git clone ssh://git@git.intmain.io:8322/geraldoim/dot_ack.git /home/geraldo/.ack
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_ssh_dionisio.git /home/geraldo/.ssh
 git clone ssh://git@git.intmain.io:8322/geraldoim/gnupg_dionisio.git /home/geraldo/.gnupg/
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_bash.git /home/geraldo/.bash
+git clone ssh://git@git.intmain.io:8322/Intmain/language_cpp /home/geraldo/git/Intmain/language_cpp
+git clone ssh://git@git.intmain.io:8322/geraldoim/dot_ack.git /home/geraldo/.ack
+git clone ssh://git@git.intmain.io:8322/geraldoim/dot_bash.git /home/geraldo/.bash
