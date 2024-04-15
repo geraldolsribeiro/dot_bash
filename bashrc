@@ -204,7 +204,7 @@ export NVM_DIR="$HOME/.nvm"
 #   ~/.fzf/install
 # Atualizacao:
 # cd ~/.fzf && git pull && ./install
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export PATH=$PATH:/opt/intmain/dev/linux/usr/bin
 
