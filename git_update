@@ -37,7 +37,7 @@ do
     if [ "$n" -gt 0 ]; then
       lazygit
     fi
-    git pull origin master || git pull origin main
+    git pull --rebase origin master || git pull --rebase origin main || bash
     popd > /dev/null || return
   else
     echo "Configuração $d não encontrada" | tee -a /tmp/git_update.log
