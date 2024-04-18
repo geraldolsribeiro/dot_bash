@@ -264,6 +264,7 @@ for d in \
   /opt/flutter/bin \
   /usr/lib/dart/bin \
   /usr/lib/go-1.14/bin \
+  /opt/jabref/bin/ \
   $HOME/git/github/git-fuzzy/bin
 do
   if [ -d "$d" ]; then

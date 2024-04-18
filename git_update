@@ -28,23 +28,23 @@ for d in \
 do
   if [ -d "$d/.git" ]; then
     echo "Atualizando $d..."
-    pushd "$d" || return
+    pushd "$d" > /dev/null || return
     remote=$( git remote -v | awk '{ print $2 }' | uniq )
     echo "git clone ${remote} ${d}" >> "${REPOS}"
+    sort -u -o "${REPOS}" "${REPOS}"
     n=$(git diff | wc -l)
     if [ "$n" -gt 0 ]; then
       lazygit
     fi
     git pull origin master || git pull origin main
-    popd || return
+    popd > /dev/null || return
   else
-    echo "Configuração $d não encontrada"
+    echo "Configuração $d não encontrada" | tee -a /tmp/git_update.log
   fi
 done
-sort -u -o "${REPOS}" "${REPOS}"
 
-if [ -d ~/.fzf ]; then
-  pushd ~/.fzf/ && ./install && popd
-fi
+# if [ -d ~/.fzf ]; then
+#   pushd ~/.fzf/ && ./install && popd
+# fi
 
 # vim: ft=bash
