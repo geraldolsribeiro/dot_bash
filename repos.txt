@@ -12,6 +12,7 @@ git clone ssh://git@git.intmain.io:8322/geraldoim/dot_dwm.git /home/geraldo/.dwm
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_dwm /home/geraldo/.dwm/
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_fman.git /home/geraldo/.config/fman/
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_git.git /home/geraldo/.git
+git clone ssh://git@git.intmain.io:8322/geraldoim/dot_share_applications.git /home/geraldo/.local/share/applications/
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_ssh_dionisio.git /home/geraldo/.ssh
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_tmux.git /home/geraldo/.tmux
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_vim.git /home/geraldo/.vim

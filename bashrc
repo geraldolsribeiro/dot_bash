@@ -102,7 +102,7 @@ then
       git config --global user.name "Geraldo Ribeiro"
       case "$HOSTNAME" in
         geraldo*)
-          git config --global user.email "geraldo.ribeiro@digital14.com"
+          git config --global user.email "geraldo.ribeiro@katim.com"
           ;;
         golf*)
           git config --global user.email "geraldo@stefaninirafael.com"
@@ -123,6 +123,7 @@ then
   esac
   git config --global core.editor vim
   git config --global merge.tool vimdiff
+  git config --global pull.rebase true
 
   # gitignore no git gui
   git config --global guitool."Add to .gitignore".cmd $'echo "\n$FILENAME" >> .gitignore & git add .gitignore'
