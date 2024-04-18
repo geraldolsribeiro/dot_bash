@@ -1,6 +1,6 @@
+git clone git@github.com:geraldolsribeiro/dot_gdb.git /home/geraldo/.gdb
 git clone git@github.com:geraldolsribeiro/GrTooltip.git /home/geraldo/.GrTooltip
-git clone https://github.com/geraldolsribeiro/vimrc.git
-git clone https://github.com/junegunn/fzf.git /home/geraldo/.fzf/
+git clone ssg://git@github.com:geraldolsribeiro/dot_gdb.git /home/geraldo/.gdb
 git clone ssh://git@github.com:geraldolsribeiro/dot_gdb.git /home/geraldo/.gdb
 git clone ssh://git@github.com:geraldolsribeiro/GrTooltip.git /home/geraldo/.GrTooltip
 git clone ssh://git@github.com:geraldolsribeiro/vimrc.git /home/geraldo/.vim
@@ -9,6 +9,7 @@ git clone ssh://git@git.intmain.io:8322/geraldoim/dot_bash.git /home/geraldo/.ba
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_clang_format.git /home/geraldo/.clang/
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_config_ranger.git /home/geraldo/.config/ranger/
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_dwm.git /home/geraldo/.dwm/
+git clone ssh://git@git.intmain.io:8322/geraldoim/dot_dwm /home/geraldo/.dwm/
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_fman.git /home/geraldo/.config/fman/
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_git.git /home/geraldo/.git
 git clone ssh://git@git.intmain.io:8322/geraldoim/dot_ssh_dionisio.git /home/geraldo/.ssh
@@ -25,4 +26,13 @@ git clone ssh://git@git.intmain.io:8322/Intmain/dot_thunar.git /home/geraldo/.co
 git clone ssh://git@git.intmain.io:8322/Intmain/language_cpp.git /home/geraldo/git/Intmain/language_cpp
 git clone ssh://git@git.intmain.io:8322/Intmain/language_cpp /home/geraldo/git/Intmain/language_cpp
 git clone ssh://git@git.intmain.io:8322/Intmain/site-geraldo-dot-dev-pug.git /home/geraldo/git/Intmain/site-geraldo-dot-dev
-ssh://git@git.intmain.io:8322/geraldoim/dot_vim.git /home/geraldo/.vim
+git clone ssh://git@intmain.io:8322/geraldoim/dot_ack.git /home/geraldo/.ack
+git clone ssh://git@intmain.io:8322/geraldoim/dot_bash.git /home/geraldo/.bash
+git clone ssh://git@intmain.io:8322/geraldoim/dot_clang_format.git /home/geraldo/.clang/
+git clone ssh://git@intmain.io:8322/geraldoim/dot_config_ranger.git /home/geraldo/.config/ranger/
+git clone ssh://git@intmain.io:8322/geraldoim/dot_git.git /home/geraldo/.git
+git clone ssh://git@intmain.io:8322/geraldoim/dot_tmux.git /home/geraldo/.tmux
+git clone ssh://git@intmain.io:8322/geraldoim/dot_vim.git /home/geraldo/.vim
+git clone ssh://git@intmain.io:8322/Intmain/bin.git /home/geraldo/bin
+git clone ssh://git@intmain.io:8322/Intmain/dot_fonts.git /home/geraldo/.fonts
+git clone ssh://git@intmain.io:8322/Intmain/language_cpp.git /home/geraldo/git/Intmain/language_cpp

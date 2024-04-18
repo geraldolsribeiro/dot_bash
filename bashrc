@@ -35,7 +35,6 @@ setterm --powerdown 1
 
 export PATH=~/bin:$PATH
 
-
 # https://grpc.io/docs/languages/cpp/quickstart/
 export MY_INSTALL_DIR=$HOME/.local
 mkdir -p "$MY_INSTALL_DIR"
@@ -198,14 +197,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# FZF
-# Primeira instalação:
-#   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-#   ~/.fzf/install
-# Atualizacao:
-# cd ~/.fzf && git pull && ./install
-#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 export PATH=$PATH:/opt/intmain/dev/linux/usr/bin
 
 #export PATH=/usr/lib/icecc/bin:$PATH
@@ -232,8 +223,7 @@ if [ -x /usr/bin/vivid ]; then
   export LS_COLORS="$( vivid generate one-dark )"
 fi
 
-export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/Books/:~/git/StefaniniRafael:~/git/github:~/Seafile/
-
+export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/PileOfBooks/:~/Seafile/Books/:~/git/StefaniniRafael:~/git/github:~/Seafile/
 
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -345,4 +335,11 @@ fi
 
 if [ -d /data/home/geraldo/arm-gnu-toolchain-12.3.rel1-x86_64-aarch64-none-linux-gnu ]; then
   export PATH=$PATH:/data/home/geraldo/arm-gnu-toolchain-12.3.rel1-x86_64-aarch64-none-linux-gnu/bin
+fi
+
+if [ -d /home/geraldo/go/deps ]; then
+  export CGO_CFLAGS="-I/home/geraldo/go/deps/raft/include/ -I/home/geraldo/go/deps/cowsql/include/"
+  export CGO_LDFLAGS="-L/home/geraldo/go/deps/raft/.libs -L/home/geraldo/go/deps/cowsql/.libs/"
+  export LD_LIBRARY_PATH="/home/geraldo/go/deps/raft/.libs/:/home/geraldo/go/deps/cowsql/.libs/"
+  export CGO_LDFLAGS_ALLOW="(-Wl,-wrap,pthread_create)|(-Wl,-z,now)"
 fi

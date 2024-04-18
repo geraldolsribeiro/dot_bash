@@ -18,6 +18,7 @@ for d in \
   ~/.fzf/ \
   ~/.git \
   ~/.gdb \
+  ~/.local/share/applications/ \
   ~/.local/share/nemo/ \
   ~/.tmux \
   ~/.vim \
