@@ -279,7 +279,7 @@ function cg {
 alias acksca="ack --ignore-dir=fdscacTest --ignore-dir=fdscac.code.generation"
 
 # https://github.com/sharkdp/bat
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 
 
 export NNN_BMS='d:~/Documents;g:~/git/Intmain;D:~/Downloads/'
