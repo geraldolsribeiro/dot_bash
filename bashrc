@@ -224,7 +224,7 @@ if [ -x /usr/bin/vivid ]; then
   export LS_COLORS="$( vivid generate one-dark )"
 fi
 
-export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/PileOfBooks/:~/Seafile/Books/:~/git/StefaniniRafael:~/git/github:~/Seafile/
+export CDPATH=.:~:~/git/Intmain:~/git/Taoker/:~/Seafile/Books/:~/git/StefaniniRafael:~/git/github:~/Seafile/:~/Seafile/PileOfBooks/
 
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
