@@ -278,8 +278,16 @@ function cg {
 # Busca para o projeto FDSCAC
 alias acksca="ack --ignore-dir=fdscacTest --ignore-dir=fdscac.code.generation"
 
+BAT=/usr/bin/cat
+for bat in /usr/bin/bat /usr/bin/batcat
+do
+  if [ -f "${bat}" ]; then
+    BAT=${bat}
+  fi
+done
+
 # https://github.com/sharkdp/bat
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANPAGER="sh -c 'col -bx | $BAT -l man -p'"
 
 
 export NNN_BMS='d:~/Documents;g:~/git/Intmain;D:~/Downloads/'
