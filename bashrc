@@ -250,12 +250,14 @@ export FUSION_FONTS=~/.fonts/
 # Tem uma versão do dart junto com o flutter, vou usar ela em vez do instalado no sistema
 for d in \
   /opt/st/stm32cubeide_1.14.0/ \
-  /home/geraldo/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin \
+  /opt/st/STM32CubeProgrammer/bin/ \
+  /opt/arduino/arduino-ide_2.3.2_Linux_64bit/ \
   /usr/local/go/bin \
   /opt/flutter/bin \
   /usr/lib/dart/bin \
   /usr/lib/go-1.14/bin \
   /opt/jabref/bin/ \
+  $HOME/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin \
   $HOME/git/github/git-fuzzy/bin
 do
   if [ -d "$d" ]; then
