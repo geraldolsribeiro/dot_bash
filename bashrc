@@ -257,6 +257,7 @@ for d in \
   /usr/lib/dart/bin \
   /usr/lib/go-1.14/bin \
   /opt/jabref/bin/ \
+  /opt/intelFPGA/18.1/modelsim_ase/bin/ \
   $HOME/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin \
   $HOME/git/github/git-fuzzy/bin
 do
