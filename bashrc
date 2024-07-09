@@ -345,11 +345,6 @@ fi
 
 trap 'echo "🚧 ocorreu um erro no ${FUNCNAME:-terminal} 🚧"' ERR
 
-if [ -f "$HOME/.cargo/env" ]; then
-. "$HOME/.cargo/env"
-fi
-
-
 if [ -d /data/home/geraldo/arm-gnu-toolchain-12.3.rel1-x86_64-aarch64-none-linux-gnu ]; then
   export PATH=$PATH:/data/home/geraldo/arm-gnu-toolchain-12.3.rel1-x86_64-aarch64-none-linux-gnu/bin
 fi

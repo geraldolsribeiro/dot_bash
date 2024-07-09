@@ -59,4 +59,9 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 export GTK_THEME=Adwaita:dark
 
+
+if [ -f "$HOME/.cargo/env" ]; then
+. "$HOME/.cargo/env"
+fi
+
 # vim: ft=bash
