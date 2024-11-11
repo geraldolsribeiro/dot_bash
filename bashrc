@@ -26,11 +26,17 @@
 #   gem update --system 3.0.6
 #   ```
 
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 # For debuging pourpose
 # set -x
 
 # Ctrl-a não travar a tela
-stty -ixon
+[[ $- == *i* ]] && stty -ixon
 
 setterm --powerdown 1
 
@@ -291,12 +297,10 @@ for bat in /usr/bin/bat /usr/bin/batcat
 do
   if [ -f "${bat}" ]; then
     BAT=${bat}
+    # https://github.com/sharkdp/bat
+    export MANPAGER="sh -c 'col -bx | $BAT -l man -p'"
   fi
 done
-
-# https://github.com/sharkdp/bat
-export MANPAGER="sh -c 'col -bx | $BAT -l man -p'"
-
 
 export NNN_BMS='d:~/Documents;g:~/git/Intmain;D:~/Downloads/'
 export NNN_SSHFS="sshfs -o follow_symlinks"        # make sshfs follow symlinks on the remote
@@ -359,3 +363,4 @@ fi
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export QSYS_ROOTDIR="/opt/intelFPGA_lite/23.1std/quartus/sopc_builder/bin"
+# source /opt/DMT/DMT_vars.sh
