@@ -355,3 +355,7 @@ if [ -d /home/geraldo/go/deps ]; then
   export LD_LIBRARY_PATH="/home/geraldo/go/deps/raft/.libs/:/home/geraldo/go/deps/cowsql/.libs/"
   export CGO_LDFLAGS_ALLOW="(-Wl,-wrap,pthread_create)|(-Wl,-z,now)"
 fi
+
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export QSYS_ROOTDIR="/opt/intelFPGA_lite/23.1std/quartus/sopc_builder/bin"

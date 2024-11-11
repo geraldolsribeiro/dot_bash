@@ -65,3 +65,6 @@ if [ -f "$HOME/.cargo/env" ]; then
 fi
 
 # vim: ft=bash
+. "$HOME/.cargo/env"
+
+export QSYS_ROOTDIR="/opt/intelFPGA_lite/23.1std/quartus/sopc_builder/bin"
